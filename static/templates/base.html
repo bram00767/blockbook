@@ -58,7 +58,7 @@
                     {{- end -}}
                     <ul class="navbar-nav ml-md-auto">
                         <li class="nav-item">
-                            <a href="https://guarda.co/" class="nav-link">Guarda Wallet</a>
+                            <a href="https://guarda.com/" class="nav-link">Guarda Wallet</a>
                         </li>
                     </ul>
                     {{- if eq .CoinLabel "Bitcoin Cash SV" -}}
@@ -121,6 +121,30 @@
                             <a target="_blank" href="https://swapzone.io/?from=zec&to=btc" class="nav-link">Best ZEC price</a>
                         </li>
                     </ul>
+                    {{ else if eq .CoinLabel "Qtum" }}
+                    <ul class="navbar-nav flex-row ml-md-auto d-none d-lg-flex ">
+                        <li class="nav-item">
+                            <a target="_blank" href="https://swapzone.io/?from=btc&to=qtum" class="nav-link">Best QTUM price</a>
+                        </li>
+                    </ul>
+                    {{ else if eq .CoinLabel "Vertcoin" }}
+                    <ul class="navbar-nav flex-row ml-md-auto d-none d-lg-flex ">
+                        <li class="nav-item">
+                            <a target="_blank" href="https://swapzone.io/?from=btc&to=vtc" class="nav-link">Best VTC price</a>
+                        </li>
+                    </ul>
+                    {{ else if eq .CoinLabel "Groestlcoin" }}
+                    <ul class="navbar-nav flex-row ml-md-auto d-none d-lg-flex ">
+                        <li class="nav-item">
+                            <a target="_blank" href="https://swapzone.io/?from=btc&to=grs" class="nav-link">Best GRS price</a>
+                        </li>
+                    </ul>
+                    {{ else if eq .CoinLabel "Dash" }}
+                    <ul class="navbar-nav flex-row ml-md-auto d-none d-lg-flex ">
+                        <li class="nav-item">
+                            <a target="_blank" href="https://swapzone.io/?from=btc&to=dash" class="nav-link">Best DASH price</a>
+                        </li>
+                    </ul>
                     {{- end -}}
                 </div>
             </nav>
@@ -135,7 +159,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-guarda">
                 <span class="navbar-nav">
-                    <a class="nav-link" href="https://github.com/trezor/blockbook" target="_blank" rel="noopener noreferrer">Powered by BlockBook</a>
+                    <a class="nav-link" href="https://github.com/guardaco/blockbook" target="_blank" rel="noopener noreferrer">Powered by BlockBook</a>
                 </span>
                 <ul class="d-none ml-md-auto d-md-flex navbar-nav">
                     <li class="nav-item">
@@ -148,12 +172,12 @@
                     </li>
                 </ul>
                 {{- if eq .CoinLabel "Bitcoin Cash SV" -}}
-                <ul class="ml-md-auto d-md-flex navbar-nav flex-row">
-                    <li class="nav-item">
-                        <span class="nav-link">Donate: 14CcTei9dQKAjgbBbBci3a5yJBPy8y6NWq</span>
-                    </li>
-                </ul>
-                {{- end -}} 
+                    <ul class="ml-md-auto d-md-flex navbar-nav flex-row">
+                        <li class="nav-item">
+                            <span class="nav-link">Donate: 14CcTei9dQKAjgbBbBci3a5yJBPy8y6NWq</span>
+                        </li>
+                    </ul>
+                {{- end -}}
             </nav>
         </div>
     </footer>

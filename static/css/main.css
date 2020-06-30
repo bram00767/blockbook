@@ -115,9 +115,7 @@ h3 {
 .bg-guarda {
     background-image: linear-gradient(90deg,#9e77c1,#a572ba);
     background-color: #9e77c1!important;
-    padding-top: 3px;
-    padding-bottom: 2px;
-    z-index: 2;
+    height: 53px;
 }
 
 .bg-guarda .navbar-brand {
@@ -125,6 +123,11 @@ h3 {
     font-weight: bold;
     font-size: 19px;
     fill: #FFFFFF;
+}
+
+.guarda-logo-svg-white svg {
+    fill: #FFFFFF;
+    margin-top: 6px;
 }
 
 @media (max-width: 768px) {
@@ -147,6 +150,7 @@ h3 {
 #footer {
     background-image: linear-gradient(90deg,#9e77c1,#a572ba);
     background-color: #9e77c1;
+    color: #fff;
     height: 42px;
     overflow: hidden;
 }
@@ -176,6 +180,7 @@ h3 {
     display: inline-block;
     padding: .7em 2em;
     font-size: 13px;
+    font-weight: 100;
     color: #fff;
     text-align: center;
     white-space: nowrap;
