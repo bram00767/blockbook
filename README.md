@@ -16,7 +16,7 @@
 ## For Guarda Dev Team
 
  - Branch `guarda-changes` only for production use. DO NOT MERGE UNTESTED CHANGES!
- - Branch `master` for compability with Trezor upstream. DO NOT DIRECTLY COMMIT ANYTHING!
+ - Branch `master` for compability with Trezor upstream. ONLY PRs FROM UPSTREAM ALLOWED!
 
 ## Build and installation instructions
 
