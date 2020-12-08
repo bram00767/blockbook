@@ -220,6 +220,9 @@ func (w *Worker) GetTransactionFromBchainTx(bchainTx *bchain.Tx, height int, spe
 				if vin.ValueSat != nil {
 					valInSat.Add(&valInSat, (*big.Int)(vin.ValueSat))
 				}
+			} else {
+				vin.AddrDesc = w.chainParser.GetAddrDescForUnknownInput(bchainTx, i)
+				vin.Addresses, vin.IsAddress, err = w.chainParser.GetAddressesFromAddrDesc(vin.AddrDesc)
 			}
 		} else if w.chainType == bchain.ChainEthereumType {
 			if len(bchainVin.Addresses) > 0 {
