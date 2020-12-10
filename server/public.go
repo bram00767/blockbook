@@ -440,6 +440,7 @@ func (s *PublicServer) parseTemplates() []*template.Template {
 		"setTxToTemplateData":      setTxToTemplateData,
 		"isOwnAddress":             isOwnAddress,
 		"isOwnAddresses":           isOwnAddresses,
+		"addressEquals":            addressEquals,
 	}
 	var createTemplate func(filenames ...string) *template.Template
 	if s.debug {
@@ -505,6 +506,10 @@ func formatUnixTime(ut int64) string {
 
 func formatTime(t time.Time) string {
 	return t.Format(time.RFC1123)
+}
+
+func addressEquals(addresses []string, value string) bool {
+	return len(addresses) == 1 && addresses[0] == value
 }
 
 // for now return the string as it is
