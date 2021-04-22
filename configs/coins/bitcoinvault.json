@@ -1,8 +1,8 @@
 {
   "coin": {
-    "name": "Bitcoinvault",
+    "name": "Bitcoin Vault",
     "shortcut": "BTCV",
-    "label": "Bitcoinvault",
+    "label": "Bitcoin Vault",
     "alias": "bitcoinvault"
   },
   "ports": {

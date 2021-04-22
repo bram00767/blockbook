@@ -36,6 +36,8 @@ func isFakeAuxpowPreforkBlockParent(hash string) bool {
 func init() {
 	MainNetParams = chaincfg.MainNetParams
 	MainNetParams.Net = MainnetMagic
+
+	// From https://github.com/bitcoinvault/bitcoinvault/blob/a6ab4e7a6dda8e2b8fda4a6c4a558bd412f23d89/src/chainparams.cpp#L138-L144
 	MainNetParams.PubKeyHashAddrID = []byte{78}
 	MainNetParams.ScriptHashAddrID = []byte{60}
 	MainNetParams.Bech32HRPSegwit = "royale"
