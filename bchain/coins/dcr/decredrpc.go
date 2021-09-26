@@ -502,6 +502,14 @@ func (d *DecredRPC) GetBlock(hash string, height uint32) (*bchain.Block, error) 
 	// Confirm if the block at provided height has at least 2 confirming blocks.
 	d.mtx.Lock()
 
+	if height == 0 {
+		getHashResult, err := d.getBlockHashByHeight(height+1)
+		if err != nil {
+			return nil, err
+		}
+		hash = getHashResult.Result
+	}
+
 	if height > d.bestBlock {
 		bestBlock, err := d.getBestBlock()
 		if err != nil || height > bestBlock.Result.Height {
@@ -578,13 +586,6 @@ func (d *DecredRPC) getBlock(hash string) (*GetBlockResult, error) {
 	}
 
 	var block GetBlockResult
-
-	//Need for skip block height 0 without data
-	if hash == "298e5cc3d985bfe7f81dc135f360abe089edd4396b86d2de66b0cef42b21d980" {
-		glog.Info("Skip 0 block with hash " + hash)
-		return &block, nil
-	}
-
 	if err := d.Call(blockRequest, &block); err != nil {
 		return nil, err
 	}
